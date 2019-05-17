@@ -7,4 +7,4 @@ SELECT cu.Name, co.Name, o.OrderDate,
 FROM Customers cu
 JOIN Orders o ON o.CustomerId = cu.Id
 LEFT JOIN Contacts co ON co.Id = o.ContactId
-WHERE o.OrderDate BETWEEN '2017-01-01' AND '2017-01-31 23:59:59.999'
+WHERE o.OrderDate >= '2017-01-01' AND o.OrderDate < '2017-02-01'
